@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\servicesController;
+use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ServicesController::class, 'index'])->name("services.index");
+Route::get('/services', [ServicesController::class, 'index'])->name("services.index");
+Route::get('/services/create', [ServicesController::class, 'create']);
+Route::post('/services', [servicesController::class, 'store'])->name("services.store");
