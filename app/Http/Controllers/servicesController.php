@@ -23,6 +23,15 @@ class ServicesController extends Controller
 
     public function store()
     {
+        request()->validate([
+            'name' => ['required', 'min:3'],
+            'title' => ['required', 'min:3'],
+            'description' => ['required', 'min:5'],
+            'email' => ['required', 'email'],
+            'price' => ['required', 'numeric'],
+            'category_id' => ['required', 'numeric'],
+        ]);
+
         $data = request()->all();
 
         $service = new Service;

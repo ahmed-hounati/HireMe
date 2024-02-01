@@ -19,33 +19,48 @@
                 @csrf
                 <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                     <div>
-                        <label class="text-gray-700 dark:text-gray-200" for="username">Your Name</label>
-                        <input id="username" type="text" name="name"
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <label class="text-gray-700 dark:text-gray-200" for="name">Your Name</label>
+                        <input id="name" type="text" name="name"
+                            class="@error('name') border-red-500 @enderror block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        @error('name')
+                            <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div>
                         <label class="text-gray-700 dark:text-gray-200" for="email">Email Address</label>
                         <input id="email" type="email" name="email"
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                            class="@error('email') border-red-500 @enderror block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        @error('email')
+                            <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div>
                         <label class="text-gray-700 dark:text-gray-200" for="title">Service</label>
                         <input id="title" type="text" name="title"
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                            class="@error('title') border-red-500 @enderror block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        @error('title')
+                            <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div>
                         <label class="text-gray-700 dark:text-gray-200" for="description">Description</label>
                         <input id="description" type="text" name="description"
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                            class="@error('description') border-red-500 @enderror block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        @error('description')
+                            <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div>
                         <label class="text-gray-700 dark:text-gray-200" for="price">Price</label>
                         <input id="price" type="text" name="price"
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                            class="@error('price') border-red-500 @enderror block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        @error('price')
+                            <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="mt-8">

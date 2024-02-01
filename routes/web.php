@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [ServicesController::class, 'index'])->name("services.index");
 Route::get('/services', [ServicesController::class, 'index'])->name("services.index");
-Route::get('/services/create', [ServicesController::class, 'create']);
-Route::post('/services', [servicesController::class, 'store'])->name("services.store");
+Route::get('/services/create', [ServicesController::class, 'create'])->name("services.create");
+Route::post('/services/create', [servicesController::class, 'store'])->name("services.store");

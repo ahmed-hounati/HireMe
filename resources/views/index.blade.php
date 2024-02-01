@@ -24,10 +24,10 @@
                     <div
                         class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
                         <h3 class="text-xl font-bold text-white mt-4">Categorie : {{ $service->Categorie->title }}</h3>
-                        <p class="text-gray-500 dark:text-gray-300">
-                            {{ $service->created_at }}
+                        <p class="text-gray-500 dark:text-gray-300"> creation date :
+                            {{ $service->created_at->format('d-m-y') }}
                         </p>
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">{{ $service->title }}
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Service : {{ $service->title }}
                         </h1>
                         <p class="text-gray-500 dark:text-gray-300">
                             {{ $service->description }}
@@ -35,8 +35,8 @@
                         <p class="text-gray-500 dark:text-gray-300">
                             {{ $service->email }}
                         </p>
-                        <p class="text-gray-500 dark:text-gray-300">
-                            {{ $service->price }}
+                        <p class="text-gray-500 dark:text-gray-300"> Price :
+                            {{ $service->price }}dh
                         </p>
                     </div>
                 @endforeach
